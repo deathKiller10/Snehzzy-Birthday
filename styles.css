@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading{
+    text-align: center;
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(19,106,218,1) 0%, rgba(0,212,255,1) 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-top: 80px;
+    margin-bottom: 0;
+    z-index:1;
+    /* text-shadow: rgb(0, 68, 255) 1px 0 10px; */
+}
+
+body {
+    background: rgb(110,63,251);
+    background: radial-gradient(circle, rgba(110,63,251,1) 14%, rgba(252,70,107,1) 100%);
+    /* min-height: 100dvh; */
+    /* display: grid; */
+    /* place-content: center; */
+}
+
+.wrapper{
+    z-index: 1;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    position: relative;
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 80px;
+    border-radius: 0.75rem;
+    background-size:cover ;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description h4 {
+    background-clip: border-box;
+    text-transform: uppercase;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url('pic3.jpg');
+}
+.card[for="c2"] {
+    background-image: url('pic2.jpg');
+}
+.card[for="c3"] {
+    background-image: url('pic6.jpg');
+}
+.card[for="c4"] {
+    background-image: url('pic4.jpg');
+}
+.card[for="c5"] {
+    background-image: url('pic5.jpg');
+}
